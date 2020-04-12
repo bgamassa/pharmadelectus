@@ -17,3 +17,6 @@
 ## More about the request parameters
 - The `type` parameter can only be "industrie", "phbmr" or "autres".
 - The `data` parameter is a list of 0s and 1s corresponding to the qualities selected by the user.
+- According to the test type, the list length will NOT be the same { "industrie" : 80, "phbmr" : 86, "autres": 96 }
+- In the file `api/thanh.py`, you will find the list of qualities for each test type with their corresponding index.
+- For example, if you read { "Autonome" : 7 }, it means that you must set the 7th element to your input list as 1. 

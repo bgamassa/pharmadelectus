@@ -16,4 +16,4 @@
 
 ## More about the request parameters
 - The `type` parameter can only be "industrie", "phbmr" or "autres".
-- The data parameter is a list of 0s and 1s corresponding to the qualities selected by the user.
+- The `data` parameter is a list of 0s and 1s corresponding to the qualities selected by the user.

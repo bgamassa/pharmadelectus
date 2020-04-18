@@ -25,6 +25,7 @@ def predict(request):
     model, legend = model_dict[test_type]
     X = np.asarray(list(data)).reshape(1, -1)
     pred = model.predict_proba(X)
-    response = sort_dict({ legend[x] : (pred[0][x]) * 100 for x in (-pred).argsort()[0] })
+    resp_aux = sort_dict({ legend[x] : (pred[0][x]) * 100 for x in (-pred).argsort()[0] })
+    response = [ { "key" : k, "value" : int(v) } for k, v in resp_aux.items() ]
     return Response(response)
 

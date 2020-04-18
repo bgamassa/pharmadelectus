@@ -26,6 +26,7 @@ SECRET_KEY = 'y^#ploj!ay*h+&9x^)bbvnw*tuvek(2zha2i1&_3_se@m*v)k0'
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
+CORS_ORIGIN_ALLOW_ALL = True
 
 MODELS = os.path.join(BASE_DIR, 'predictor/models')
 
@@ -38,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
     'predictor'
 ]
 
@@ -49,6 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'api.urls'

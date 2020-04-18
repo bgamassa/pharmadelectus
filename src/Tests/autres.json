@@ -1,0 +1,386 @@
+[
+    {
+        "key": "Adaptabilité géographique",
+        "value": 22
+    },
+    {
+        "key": "Adaptabilité à une situation",
+        "value": 21
+    },
+    {
+        "key": "Administratif",
+        "value": 42
+    },
+    {
+        "key": "Affaire réglementaire",
+        "value": 43
+    },
+    {
+        "key": "Analytique",
+        "value": 1
+    },
+    {
+        "key": "Armée",
+        "value": 44
+    },
+    {
+        "key": "Assurance",
+        "value": 45
+    },
+    {
+        "key": "Assurance qualité",
+        "value": 46
+    },
+    {
+        "key": "Attentioné(e)",
+        "value": 2
+    },
+    {
+        "key": "Autonome",
+        "value": 23
+    },
+    {
+        "key": "Bilingue (anglais) ou plus",
+        "value": 24
+    },
+    {
+        "key": "Biotechnologie",
+        "value": 47
+    },
+    {
+        "key": "Bon relationnel",
+        "value": 25
+    },
+    {
+        "key": "Business marketing",
+        "value": 48
+    },
+    {
+        "key": "Capacité à apprendre rapidement",
+        "value": 3
+    },
+    {
+        "key": "Carrière militaire ou sapeur pompier",
+        "value": 49
+    },
+    {
+        "key": "Charismatique",
+        "value": 4
+    },
+    {
+        "key": "Conformité",
+        "value": 50
+    },
+    {
+        "key": "Conseils",
+        "value": 51
+    },
+    {
+        "key": "Convaincant",
+        "value": 26
+    },
+    {
+        "key": "Coordination",
+        "value": 52
+    },
+    {
+        "key": "Curiosité",
+        "value": 5
+    },
+    {
+        "key": "Developpement",
+        "value": 55
+    },
+    {
+        "key": "Diplomate",
+        "value": 27
+    },
+    {
+        "key": "Direction",
+        "value": 56
+    },
+    {
+        "key": "Dispositif médicaux",
+        "value": 57
+    },
+    {
+        "key": "Documentation scientifique",
+        "value": 58
+    },
+    {
+        "key": "Droit de la santé",
+        "value": 59
+    },
+    {
+        "key": "Dynamique",
+        "value": 6
+    },
+    {
+        "key": "Déontologie",
+        "value": 53
+    },
+    {
+        "key": "Déplacement géographique",
+        "value": 54
+    },
+    {
+        "key": "Esprit critique",
+        "value": 7
+    },
+    {
+        "key": "Esprit scientifique",
+        "value": 8
+    },
+    {
+        "key": "Esprit synthétique",
+        "value": 9
+    },
+    {
+        "key": "Essais cliniques",
+        "value": 63
+    },
+    {
+        "key": "Excellent relationnel",
+        "value": 28
+    },
+    {
+        "key": "Flexible",
+        "value": 10
+    },
+    {
+        "key": "Force de proposition",
+        "value": 29
+    },
+    {
+        "key": "Former",
+        "value": 65
+    },
+    {
+        "key": "Formulation",
+        "value": 66
+    },
+    {
+        "key": "Humanitaire",
+        "value": 67
+    },
+    {
+        "key": "Hôpital",
+        "value": 95
+    },
+    {
+        "key": "Ingénierie",
+        "value": 68
+    },
+    {
+        "key": "Inspection",
+        "value": 69
+    },
+    {
+        "key": "Inspiré(e)",
+        "value": 11
+    },
+    {
+        "key": "Inventif(ve)",
+        "value": 12
+    },
+    {
+        "key": "Laboratoire d'analyse",
+        "value": 70
+    },
+    {
+        "key": "Leader",
+        "value": 30
+    },
+    {
+        "key": "Marketing access",
+        "value": 71
+    },
+    {
+        "key": "Maîtrise outils informatiques",
+        "value": 31
+    },
+    {
+        "key": "Motivateur",
+        "value": 13
+    },
+    {
+        "key": "Médico-légale",
+        "value": 72
+    },
+    {
+        "key": "Nanotechnologie",
+        "value": 73
+    },
+    {
+        "key": "Observateur(rice)",
+        "value": 14
+    },
+    {
+        "key": "Organisé",
+        "value": 32
+    },
+    {
+        "key": "Parteneriat",
+        "value": 74
+    },
+    {
+        "key": "Persuasif(ve)",
+        "value": 15
+    },
+    {
+        "key": "Pharmacotechnie",
+        "value": 75
+    },
+    {
+        "key": "Pharmacovigilance",
+        "value": 76
+    },
+    {
+        "key": "Planificateur",
+        "value": 16
+    },
+    {
+        "key": "Pluridisciplinarité",
+        "value": 33
+    },
+    {
+        "key": "Police scientifique",
+        "value": 77
+    },
+    {
+        "key": "Polyvalent",
+        "value": 34
+    },
+    {
+        "key": "Proactif",
+        "value": 36
+    },
+    {
+        "key": "Production",
+        "value": 79
+    },
+    {
+        "key": "Prévention",
+        "value": 78
+    },
+    {
+        "key": "Prévoyant",
+        "value": 35
+    },
+    {
+        "key": "Qualité",
+        "value": 80
+    },
+    {
+        "key": "Qualité rédactionnelle",
+        "value": 17
+    },
+    {
+        "key": "Recherche",
+        "value": 81
+    },
+    {
+        "key": "Relation publique",
+        "value": 83
+    },
+    {
+        "key": "Relations avec une clientèle",
+        "value": 84
+    },
+    {
+        "key": "Relations pluridisciplinaire",
+        "value": 85
+    },
+    {
+        "key": "Ressent la psychologie de l'autre",
+        "value": 18
+    },
+    {
+        "key": "Rigoureux(se)",
+        "value": 19
+    },
+    {
+        "key": "Règlementaire",
+        "value": 82
+    },
+    {
+        "key": "Réactif",
+        "value": 37
+    },
+    {
+        "key": "Répartition",
+        "value": 86
+    },
+    {
+        "key": "Santé publique",
+        "value": 87
+    },
+    {
+        "key": "Sapeur-pompier",
+        "value": 88
+    },
+    {
+        "key": "Secourisme",
+        "value": 89
+    },
+    {
+        "key": "Sens du challenge",
+        "value": 38
+    },
+    {
+        "key": "Sociable",
+        "value": 20
+    },
+    {
+        "key": "Statistique",
+        "value": 90
+    },
+    {
+        "key": "Stratégique",
+        "value": 39
+    },
+    {
+        "key": "Toxicologie",
+        "value": 91
+    },
+    {
+        "key": "Travail d'équipe",
+        "value": 40
+    },
+    {
+        "key": "Veillle scientifique",
+        "value": 92
+    },
+    {
+        "key": "Vigilance",
+        "value": 93
+    },
+    {
+        "key": "Vigilant",
+        "value": 41
+    },
+    {
+        "key": "Volonté d'enseigner",
+        "value": 94
+    },
+    {
+        "key": "À l'écoute",
+        "value": 0
+    },
+    {
+        "key": "Économie/finance",
+        "value": 60
+    },
+    {
+        "key": "Éducation",
+        "value": 61
+    },
+    {
+        "key": "Épidémiologie",
+        "value": 62
+    },
+    {
+        "key": "Éthique",
+        "value": 64
+    }
+]

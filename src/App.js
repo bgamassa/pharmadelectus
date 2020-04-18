@@ -1,10 +1,11 @@
 import React from 'react';
-import LandingPage from './LandingPage/landingPage';
+import Dashboard from './Tests/dashboard';
 import './App.css';
 
 function App() {
   return (
-    <LandingPage />
+    <Dashboard test_type="industrie" />
+    //<LandingPage />
   );
 }
 

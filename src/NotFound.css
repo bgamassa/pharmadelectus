@@ -1,0 +1,103 @@
+/* Background CSS START */
+
+.nf-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #E2F1F5;
+  }
+  
+  .cloud {
+    position: fixed;
+  }
+  .cloud--small {
+     height: 25%;
+    right: -15%;
+  }
+  
+  .cloud--medium {
+     height: 35%;
+    right: -20%;
+  }
+  
+  .cloud--large {
+     height: 45%;
+    right: -25%;
+  }
+  
+  .cloud__svg {
+    fill: #ffffff;
+  }
+  
+  .cloud--1 {
+    top: 10%;
+    animation: float 40s linear infinite;
+  }
+  
+  .cloud--2 {
+    top: 20%;
+    animation: float 46s 8s linear infinite;
+  }
+  
+  .cloud--3 {
+    top: 10%;
+    animation: float 56s 18s linear infinite;
+  }
+  
+  .cloud--4 {
+    top: 6%;
+    animation: float 64s 28s linear infinite
+  }
+  
+  @keyframes float {
+    to { transform: translateX(-850%) }
+  }
+  
+  /* Skyline */
+  .skyline {
+    position: fixed;
+    bottom: 0;
+    fill: #D4D9E1;
+   width: 100%;
+  }
+  
+  /* Background CSS END */
+  
+  
+  
+  
+  
+  /* Content CSS START */
+  .nf-content-wrapper {
+    position: fixed;
+    left: 50%;
+    top: 25%;
+    text-align: center;
+  }
+  
+  .nf-header {
+    font-size: 300%;
+  }
+  
+  .nf-line {
+    width: 80%;
+  }
+  
+  .nf-text {
+    font-size: 140%;
+  }
+  
+  .nf-footer {
+    padding: 2%;
+    margin: 0 auto;
+    width: 80%;
+  }
+  
+  .fa {
+    padding: 0% 2%;
+    color: blue;
+  }
+  
+  /* Content CSS END */

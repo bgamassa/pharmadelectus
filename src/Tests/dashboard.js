@@ -1,5 +1,4 @@
 import React from 'react'
-import Typography from "@material-ui/core/Typography";
 import LandingPageBar from '../LandingPage/appBar';
 import Grid from '@material-ui/core/Grid';
 import '../LandingPage/landingPage.css';
@@ -9,9 +8,11 @@ import Checkbox from '@material-ui/core/Checkbox';
 import data_industrie from './industrie.json';
 import data_phbmr from './phbmr.json';
 import data_autres from './autres.json';
-import { Button } from '@material-ui/core';
+import { Button, Paper } from '@material-ui/core';
 import { pharmaClient } from '../pharmaClient';
 import { Redirect } from 'react-router-dom';
+import Carousel from 'react-material-ui-carousel';
+import Footer from '../LandingPage/footer';
 
 const divStyle = {
     width: '50%',
@@ -23,9 +24,9 @@ class Dashboard extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            qualities : [],
-            competences : [],
-            interets : []
+            qualities: [],
+            competences: [],
+            interets: []
         }
 
         var qualities = [];
@@ -70,15 +71,15 @@ class Dashboard extends React.Component {
         }
 
         console.log(array)
-        pharmaClient.post('/predict/', {"type" : this.props.test_type, "data" : array})
-        .then(function (response) {
-            console.log(response)
-            self.setState({ data : response.data})
-            self.setState({ redirect : true})
-          })
-          .catch(function (error) {
-            console.log(error);
-          })
+        pharmaClient.post('/predict/', { "type": this.props.test_type, "data": array })
+            .then(function (response) {
+                console.log(response)
+                self.setState({ data: response.data })
+                self.setState({ redirect: true })
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
 
     }
 
@@ -87,12 +88,28 @@ class Dashboard extends React.Component {
     }
 
     render() {
+        const pairing = [
+            { "title": "Traits de personnalité", "obj": "qualities", "color" : "#264418" },
+            { "title": "Qualités professionnelles", "obj": "competences", "color" : "#C7B78F" },
+            { "title": "Intérêts", "obj": "interets", "color" : "#0D825B" },
+        ];
+
+        const test_name = {
+            "industrie" : "Industrie",
+            "autres" : "Parcours Particuliers",
+            "phbmr" : "Pharmacie hôspitalière, biologie médicale et recherche"
+        }
+
         return (
             <div>
-                {this.state.redirect ? (<Redirect to={{ pathname: '/results', state: { data: this.state.data }}} />) : (<div></div>)}
+                {this.state.redirect ? (<Redirect to={{ pathname: '/results', state: { data: this.state.data } }} />) : (<div></div>)}
                 <LandingPageBar />
                 <section id="banner">
                     <div className="content" justify="center" style={divStyle}>
+                        <Grid>
+                            <Paper elevation={3} style={{opacity : 0.7 }}><h2>Test {test_name[this.props.test_type]}</h2></Paper>
+                        </Grid>
+                        <div style={{ padding: 25 }} />
                         <Grid
                             spacing={24}
                             style={{ width: '100%', margin: 0 }}
@@ -102,90 +119,46 @@ class Dashboard extends React.Component {
                             alignItems="left"
                             style={{ backgroundColor: "#FFFFFF", opacity: 0.6 }}
                         >
-                            <div style={{ padding: 10 }} />
-                            <h1>Traits de personnalité</h1>
-                            <Grid
-                                container
-                                direction="row"
-                                justify="center"
-                                alignItems="center"
-                            >
-                                {this.state.qualities.map((item) => {
-                                    return (<FormControlLabel control={
-                                        <Checkbox
-                                            checked={this.state[item.key]}
-                                            onChange={this.handleChange}
-                                            name={item.key}
-                                            color="primary"
-                                        />
-                                    }
-                                        label={item.key} />);
-                                })}
-                            </Grid>
-                            <div style={{ padding: 10 }} />
-                            <Divider variant="middle" />
-                            <div style={{ padding: 10 }} />
-                            <h1 style={{ color: "#C7B78F"}}>Qualités professionnelles</h1>
-                            <Grid
-                                container
-                                direction="row"
-                                justify="center"
-                                alignItems="center"
-                            >
-                                {this.state.competences.map((item) => {
-                                    return (<FormControlLabel control={
-                                        <Checkbox
-                                            checked={this.state[item.key]}
-                                            onChange={this.handleChange}
-                                            name={item.key}
-                                            color="primary"
-                                        />
-                                    }
-                                        label={item.key} />);
-                                })}
-                            </Grid>
-                            <div style={{ padding: 10 }} />
-                            <Divider variant="middle" />
-                            <div style={{ padding: 10 }} />
-                            <h1 style={{ color: "#0D825B"}}>Intérêts</h1>
-                            <Grid
-                                container
-                                direction="row"
-                                justify="center"
-                                alignItems="center"
-                            >
-                                {this.state.interets.map((item) => {
-                                    return (<FormControlLabel control={
-                                        <Checkbox
-                                            checked={this.state[item.key]}
-                                            onChange={this.handleChange}
-                                            name={item.key}
-                                            color="primary"
-                                        />
-                                    }
-                                        label={item.key} />);
-                                })}
-                            </Grid>
+                            <Carousel autoPlay={false}>
+                                {
+                                    pairing.map((p) => {
+                                        return (
+                                            <div>
+                                                <div style={{ padding: 10 }} />
+                                                <h1 style={{color : p.color}}>{p.title}</h1>
+                                                <Grid
+                                                    container
+                                                    direction="row"
+                                                    justify="center"
+                                                    alignItems="center"
+                                                    style={{margin : 15}}
+                                                >
+                                                    {this.state[p.obj].map((item) => {
+                                                        return (<FormControlLabel control={
+                                                            <Checkbox
+                                                                checked={this.state[item.key]}
+                                                                onChange={this.handleChange}
+                                                                name={item.key}
+                                                                color="primary"
+                                                            />
+                                                        }
+                                                            label={item.key} />);
+                                                    })}
+                                                </Grid>
+                                                <div style={{ padding: 10 }} />
+                                                <Divider variant="middle" />
+                                                <div style={{ padding: 10 }} />
+                                            </div>
+                                        );
+                                    })
+                                }
+                            </Carousel>
                         </Grid>
-                        <div style={{ padding: 10 }} />
-                        <Button size="large" variant="contained" onClick={this.submit}>Valider</Button>
+                        <div style={{ padding: 15 }} />
+                        <Button size="large" variant="contained" style={{backgroundColor : "#C7B78F", color: "#FFFFFF"}} onClick={this.submit}>Valider</Button>
                     </div>
                 </section>
-                <footer id="footer">
-                    <div className="inner">
-                        <h2>Contact</h2>
-                        <ul className="actions">
-                            <li><span className="icon fa-envelope" /> <span>pharmadelectus@gmail.com</span></li>
-                        </ul>
-                    </div>
-                    <div className="copyright">
-                        <a href="/privacy">Politique de confidentialité</a>
-                        <br />
-                        <a href="https://www.freepik.com/free-photos-vectors/city">City vector created by freepik - www.freepik.com</a>
-                        <br />
-                        <a href="https://www.freepik.com/free-photos-vectors/business">Business vector created by freepik - www.freepik.com</a>
-                    </div>
-                </footer>
+                <Footer />
             </div>
         );
     }

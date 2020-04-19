@@ -1,14 +1,14 @@
 import React from 'react'
-import Typography from "@material-ui/core/Typography";
 import LandingPageBar from '../LandingPage/appBar';
 import Grid from '@material-ui/core/Grid';
 import '../LandingPage/landingPage.css';
 import Divider from '@material-ui/core/Divider';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
 import { Button } from '@material-ui/core';
 import Carousel from 'react-material-ui-carousel';
 import {Paper} from '@material-ui/core';
+import Footer from '../LandingPage/footer';
+import { Icon } from '@iconify/react';
+import crownIcon from '@iconify/icons-mdi/crown';
 
 
 const divStyle = {
@@ -16,25 +16,24 @@ const divStyle = {
     margin: '0 auto'
 }
 
-export function Item(props) {
-    return (
-        <Paper>
-            <h2>{props}</h2>
-            <Button className="CheckButton">
-                Check it out!
-            </Button>
-        </Paper>
-    );
-}
-
 class Results extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            data: this.props.location.state.data
+            data: this.props.location.state ? this.props.location.state.data : []
         }
-        console.log(this.props.location.state.data)
+        console.log(this.state.data)
+    }
+
+    iconColor(index) {
+        if (index == 0)
+            return (<Icon style={{color : "#D4AF37" }} icon={crownIcon} />);
+        else if (index == 1)
+            return (<Icon style={{color : "#aaa9ad" }} icon={crownIcon} />);
+        else if (index == 2)
+            return (<Icon style={{color : "#b08d57" }} icon={crownIcon} />);
+        return (<div></div>);
     }
 
     render() {
@@ -53,15 +52,15 @@ class Results extends React.Component {
                             style={{ backgroundColor: "#FFFFFF", opacity: 0.6 }}
                         >
                             <div style={{ padding: 10 }} />
-                            <h1>Résultats</h1>
+                            <h1 style={{color : "#0D825B"}}>Résultats</h1>
                             <div style={{ padding: 10 }} />
                             <Divider variant="middle" />
                                 <Carousel interval={5000}>
                                     {
-                                        this.state.data.map((item) => {
+                                        this.state.data.slice(0, 10).map((item) => {
                                             return (
                                                 <Paper>
-                                                    <h3>{this.state.data.indexOf(item) + 1}e place </h3>
+                                                    <h3 style={{color: "#C7B78F"}}>{this.state.data.indexOf(item) + 1}e place {this.iconColor(this.state.data.indexOf(item))} </h3>
                                                     <h2>{item.key}</h2>
                                                     <h1>{item.value} %</h1>
                                                     <Button className="CheckButton">
@@ -75,21 +74,7 @@ class Results extends React.Component {
                         </Grid>
                     </div>
                 </section>
-                <footer id="footer">
-                    <div className="inner">
-                        <h2>Contact</h2>
-                        <ul className="actions">
-                            <li><span className="icon fa-envelope" /> <span>pharmadelectus@gmail.com</span></li>
-                        </ul>
-                    </div>
-                    <div className="copyright">
-                        <a href="/privacy">Politique de confidentialité</a>
-                        <br />
-                        <a href="https://www.freepik.com/free-photos-vectors/city">City vector created by freepik - www.freepik.com</a>
-                        <br />
-                        <a href="https://www.freepik.com/free-photos-vectors/business">Business vector created by freepik - www.freepik.com</a>
-                    </div>
-                </footer>
+                <Footer />
             </div>
         );
     }

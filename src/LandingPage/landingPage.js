@@ -1,8 +1,8 @@
 import React from 'react'
 import Button from '@material-ui/core/Button'
-import ButtonGroup from "@material-ui/core/ButtonGroup";
 import './landingPage.css'
 import LandingPageBar from './appBar';
+import Footer from './footer';
 
 const divStyle = {
     width: '70%',
@@ -17,30 +17,36 @@ class LandingPage extends React.Component {
                 <section id="banner">
                     <div className="content">
                         <h1>Le machine learning au service du secteur pharmaceutique</h1>
-                        <p style={divStyle}>Pharmadelectus vous propose un test intéractif permettant de découvrir les métiers de la pharmacie <br /> qui conviennent le mieux à vos compétences, vos qualités et intérêts.</p>
-                        <div style={{ padding: 20 }} />
-                        <ButtonGroup size="large" color="primary" aria-label="large outlined primary button group">
-                            <Button style={{ color: "#047924", borderColor: "#047924" }} href="/industrie">Industrie</Button>
-                            <Button style={{ color: "#C7B78F", borderColor: "#C7B78F" }} href="/phbmr">PHBMR</Button>
-                            <Button style={{ color: "#12546E", borderColor: "#12546E" }} href="/autres">Autres métiers</Button>
-                        </ButtonGroup>
+                        <div style={{ padding: 10 }} />
+                        <p style={divStyle}>Pharmadelectus vous propose un test intéractif permettant de découvrir les métiers de la pharmacie <br /> qui conviennent le mieux à vos compétences, qualités et intérêts.</p>
+                        <div style={{ padding: 30 }} />
+                        <Button variant="contained" size="large" style={{ backgroundColor: "#12546E", color: "#FFFFFF" }} href="/orientation">Trouver mon orientation</Button>
+                    </div>
+                    <div style={{ padding: 70 }} />
+                </section>
+                <section id="three" className="wrapper">
+                    <div className="inner flex flex-3">
+                        <div className="flex-item box">
+                            <div className="content">
+                                <h3 style={{color : "#0D825B"}}>À propos</h3>
+                                <p>La plateforme Pharmadelectus a été créee afin de faciliter l’orientation de l’étudiant en se basant sur sa personne et ses compétences. Le but est de proposer à l’étudiant des métiers qui correspondent le plus à son profil.</p>
+                            </div>
+                        </div>
+                        <div className="flex-item box">
+                            <div className="content">
+                                <h3 style={{color : "#0D825B"}}>Comment ça marche ?</h3>
+                                <p>Sous la forme d'un test anonyme, les informations sont analysées et traitées par un algorithme de Machine Learning utilisant un arbre de décision. Un classement des métiers les plus compatibles avec l'étudiant est ensuite établi.</p>
+                            </div>
+                        </div>
+                        <div className="flex-item box">
+                            <div className="content">
+                                <h3 style={{color : "#0D825B"}}>Comment est né le projet ?</h3>
+                                <p>Pharmadelectus a été pensé et conçu par 3 étudiants en filière pharmaceutique à la faculté de Paris-Sud - Châtenay-Malabry (Paris XI). Notre souhait premier est de donner un maximum de visibilité aux étudiants concernant les métiers de la pharmacie qu'ils peuvent exercer après leurs études.</p>
+                            </div>
+                        </div>
                     </div>
                 </section>
-                <footer id="footer">
-                    <div className="inner">
-                        <h2>Contact</h2>
-                        <ul className="actions">
-                            <li><span className="icon fa-envelope" /> <span>pharmadelectus@gmail.com</span></li>
-                        </ul>
-                    </div>
-                    <div className="copyright">
-                        <a href="/privacy">Politique de confidentialité</a>
-                        <br />
-                        <a href="https://www.freepik.com/free-photos-vectors/city">City vector created by freepik - www.freepik.com</a>
-                        <br />
-                        <a href="https://www.freepik.com/free-photos-vectors/business">Business vector created by freepik - www.freepik.com</a>
-                    </div>
-                </footer>
+                <Footer />
             </div>
         );
     }

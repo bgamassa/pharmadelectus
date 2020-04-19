@@ -5,6 +5,8 @@ import LandingPage from './LandingPage/landingPage';
 import Dashboard from './Tests/dashboard';
 import NotFound from './NotFound';
 import Results from './Tests/results';
+import Orientaion from './orientation';
+import Jobs from './jobs';
 import * as serviceWorker from './serviceWorker';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 
@@ -13,6 +15,8 @@ const routing = (
       <div>
           <Switch>
               <Route exact path ="/" component={LandingPage}/>
+              <Route path="/orientation" component={Orientaion}/>
+              <Route path="/metiers" component={Jobs}/>
               <Route path="/industrie" render={(props) => <Dashboard {...props} test_type="industrie" />}/>
               <Route path="/phbmr" render={(props) => <Dashboard {...props} test_type="phbmr" />}/>
               <Route path="/autres" render={(props) => <Dashboard {...props} test_type="autres" />}/>

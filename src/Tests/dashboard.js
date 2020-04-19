@@ -36,9 +36,9 @@ class Dashboard extends React.Component {
         const len = this.props.test_type == "industrie" ? 80 : (this.props.test_type == "phbmr" ? 86 : 96)
         for (let i = 0; i < data.length; i++) {
             this.state[data[i].key] = false
-            if (i < 21)
+            if (data[i].value < 21)
                 qualities.push(data[i])
-            else if (i < 42)
+            else if (data[i].value < 42)
                 competences.push(data[i])
             else
                 interets.push(data[i])
@@ -53,18 +53,23 @@ class Dashboard extends React.Component {
     }
 
     submit = (event) => {
+        console.log(this.state)
         var self = this;
         var array = Array(this.state.len).fill(0);
         for (let i = 0; i < this.state.qualities.length; i++) {
-            array[this.state.qualities[i].value] = 1
+            if (this.state[this.state.qualities[i].key])
+                array[this.state.qualities[i].value] = 1
         }
         for (let i = 0; i < this.state.competences.length; i++) {
-            array[this.state.competences[i].value] = 1
+            if (this.state[this.state.competences[i].key])
+                array[this.state.competences[i].value] = 1
         }
-        for (let i = 0; i < this.state.qualities.length; i++) {
-            array[this.state.competences[i].value] = 1
+        for (let i = 0; i < this.state.interets.length; i++) {
+            if (this.state[this.state.interets[i].key])
+                array[this.state.interets[i].value] = 1
         }
 
+        console.log(array)
         pharmaClient.post('/predict/', {"type" : this.props.test_type, "data" : array})
         .then(function (response) {
             console.log(response)
@@ -98,13 +103,12 @@ class Dashboard extends React.Component {
                             style={{ backgroundColor: "#FFFFFF", opacity: 0.6 }}
                         >
                             <div style={{ padding: 10 }} />
-                            <Typography variant="h4">Qualités</Typography>
+                            <h1>Traits de personnalité</h1>
                             <Grid
                                 container
                                 direction="row"
                                 justify="center"
                                 alignItems="center"
-                                style={{ backgroundColor: "#FFFFFF", opacity: 0.6 }}
                             >
                                 {this.state.qualities.map((item) => {
                                     return (<FormControlLabel control={
@@ -121,13 +125,12 @@ class Dashboard extends React.Component {
                             <div style={{ padding: 10 }} />
                             <Divider variant="middle" />
                             <div style={{ padding: 10 }} />
-                            <Typography variant="h4">Compétences</Typography>
+                            <h1 style={{ color: "#C7B78F"}}>Qualités professionnelles</h1>
                             <Grid
                                 container
                                 direction="row"
-                                justify="justify"
-                                alignItems="justify"
-                                style={{ backgroundColor: "#FFFFFF", opacity: 0.6 }}
+                                justify="center"
+                                alignItems="center"
                             >
                                 {this.state.competences.map((item) => {
                                     return (<FormControlLabel control={
@@ -144,13 +147,12 @@ class Dashboard extends React.Component {
                             <div style={{ padding: 10 }} />
                             <Divider variant="middle" />
                             <div style={{ padding: 10 }} />
-                            <Typography variant="h4">Intérêts</Typography>
+                            <h1 style={{ color: "#0D825B"}}>Intérêts</h1>
                             <Grid
                                 container
                                 direction="row"
                                 justify="center"
                                 alignItems="center"
-                                style={{ backgroundColor: "#FFFFFF", opacity: 0.6 }}
                             >
                                 {this.state.interets.map((item) => {
                                     return (<FormControlLabel control={
@@ -165,7 +167,8 @@ class Dashboard extends React.Component {
                                 })}
                             </Grid>
                         </Grid>
-                        <Button onClick={this.submit}>Valider</Button>
+                        <div style={{ padding: 10 }} />
+                        <Button size="large" variant="contained" onClick={this.submit}>Valider</Button>
                     </div>
                 </section>
                 <footer id="footer">

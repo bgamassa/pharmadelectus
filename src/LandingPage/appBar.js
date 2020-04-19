@@ -4,6 +4,7 @@ import Typography from "@material-ui/core/Typography";
 import Logo from './images/logo.png';
 import AppBar from '@material-ui/core/AppBar'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import './landingPage.css';
 
 class LandingPageBar extends React.Component {
     render() {
@@ -15,9 +16,9 @@ class LandingPageBar extends React.Component {
                         <LazyLoadImage alt="" src={Logo} border="0" height="32" />
                         </a>
                         <div style={{ padding: 10 }}/>
-                        <Typography variant="h4">
+                        <h2 style={{ color: '#FFFFFF' }}>
                         Pharmadelectus
-                        </Typography>
+                        </h2>
                         <div style={{flexGrow: 1}}/>
                     </Toolbar>
                 </AppBar>

@@ -16,7 +16,7 @@ class LandingPage extends React.Component {
                 <LandingPageBar />
                 <section id="banner">
                     <div className="content">
-                        <h1>Le machine learning au service du domaine pharmaceutique</h1>
+                        <h1>Le machine learning au service du secteur pharmaceutique</h1>
                         <p style={divStyle}>Pharmadelectus vous propose un test intéractif permettant de découvrir les métiers de la pharmacie <br /> qui conviennent le mieux à vos compétences, vos qualités et intérêts.</p>
                         <div style={{ padding: 20 }} />
                         <ButtonGroup size="large" color="primary" aria-label="large outlined primary button group">

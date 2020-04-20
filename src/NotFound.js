@@ -17,7 +17,7 @@ class Notfound extends Component {
                 </svg>
             </div >
             <div className="nf-content-wrapper">
-                    <a href="/">
+                    <a href="/pharmadelectus-project/#/">
                       <img src={LogoWhite} border="0" width="200" alt=""/>
                     </a>
                 <hr className="nf-line" />

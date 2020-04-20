@@ -4,6 +4,7 @@ import Logo from './images/logo.png';
 import AppBar from '@material-ui/core/AppBar'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import Chip from '@material-ui/core/Chip';
+import Button from '@material-ui/core/Button';
 import './landingPage.css';
 
 class LandingPageBar extends React.Component {
@@ -13,15 +14,15 @@ class LandingPageBar extends React.Component {
             <div style={{ flexGrow: 1 }}>
                 <AppBar position="sticky" style={{ backgroundColor: "#047924" }}>
                     <Toolbar>
-                        <a href="/">
-                            <LazyLoadImage alt="" src={Logo} border="0" height="32" />
+                        <a href="/pharmadelectus-project/#/">
+                            <LazyLoadImage alt="" src={Logo} height="80" />
                         </a>
                         <div style={{ padding: 10 }} />
                         <h2 style={{ color: '#FFFFFF' }}>
                             Pharmadelectus
                         </h2>
                         <div style={{ flexGrow: 1 }} />
-                        <Chip style={{ color: "#FFFFFF", borderColor: "#FFFFFF" }} label="Fiches métiers" component="a" href="/metiers" clickable variant="outlined" />
+                        <Button size="large" style={{ color: "#FFFFFF", borderColor: "#FFFFFF" }} href="/pharmadelectus-project/#/metiers" variant="outlined">Fiches métiers</Button>
                     </Toolbar>
                 </AppBar>
             </div >

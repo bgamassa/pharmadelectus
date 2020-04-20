@@ -8,22 +8,20 @@ import Results from './Tests/results';
 import Orientaion from './orientation';
 import Jobs from './jobs';
 import * as serviceWorker from './serviceWorker';
-import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import { Route, HashRouter as Router, Switch } from 'react-router-dom';
 
 const routing = (
   <Router>
-      <div>
-          <Switch>
-              <Route exact path ="/" component={LandingPage}/>
-              <Route path="/orientation" component={Orientaion}/>
-              <Route path="/metiers" component={Jobs}/>
-              <Route path="/industrie" render={(props) => <Dashboard {...props} test_type="industrie" />}/>
-              <Route path="/phbmr" render={(props) => <Dashboard {...props} test_type="phbmr" />}/>
-              <Route path="/autres" render={(props) => <Dashboard {...props} test_type="autres" />}/>
-              <Route path="/results" component={Results}/>
-              <Route component={NotFound}/>
-          </Switch>
-      </div>
+    <Switch>
+      <Route exact path="/" component={LandingPage} />
+      <Route path="/orientation" component={Orientaion} />
+      <Route path="/metiers" component={Jobs} />
+      <Route path="/industrie" render={(props) => <Dashboard {...props} test_type="industrie" />} />
+      <Route path="/phbmr" render={(props) => <Dashboard {...props} test_type="phbmr" />} />
+      <Route path="/autres" render={(props) => <Dashboard {...props} test_type="autres" />} />
+      <Route path="/results" component={Results} />
+      <Route component={NotFound} />
+    </Switch>
   </Router>
 )
 

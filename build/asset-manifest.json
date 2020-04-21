@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/pharmadelectus/static/css/main.e508b0ca.chunk.css",
-    "main.js": "/pharmadelectus/static/js/main.923c6014.chunk.js",
-    "main.js.map": "/pharmadelectus/static/js/main.923c6014.chunk.js.map",
-    "runtime-main.js": "/pharmadelectus/static/js/runtime-main.73758338.js",
-    "runtime-main.js.map": "/pharmadelectus/static/js/runtime-main.73758338.js.map",
-    "static/css/2.e0d768cb.chunk.css": "/pharmadelectus/static/css/2.e0d768cb.chunk.css",
-    "static/js/2.ad137be5.chunk.js": "/pharmadelectus/static/js/2.ad137be5.chunk.js",
-    "static/js/2.ad137be5.chunk.js.map": "/pharmadelectus/static/js/2.ad137be5.chunk.js.map",
-    "index.html": "/pharmadelectus/index.html",
-    "precache-manifest.a2526201946891f6ba1de76c046d8d06.js": "/pharmadelectus/precache-manifest.a2526201946891f6ba1de76c046d8d06.js",
-    "service-worker.js": "/pharmadelectus/service-worker.js",
-    "static/css/2.e0d768cb.chunk.css.map": "/pharmadelectus/static/css/2.e0d768cb.chunk.css.map",
-    "static/css/main.e508b0ca.chunk.css.map": "/pharmadelectus/static/css/main.e508b0ca.chunk.css.map",
-    "static/js/2.ad137be5.chunk.js.LICENSE.txt": "/pharmadelectus/static/js/2.ad137be5.chunk.js.LICENSE.txt",
-    "static/media/landingPage.css": "/pharmadelectus/static/media/background.c4388ad7.jpg",
-    "static/media/logo.png": "/pharmadelectus/static/media/logo.3cb7be30.png"
+    "main.css": "/static/css/main.c7af6a2a.chunk.css",
+    "main.js": "/static/js/main.03749532.chunk.js",
+    "main.js.map": "/static/js/main.03749532.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.84578d5e.js",
+    "runtime-main.js.map": "/static/js/runtime-main.84578d5e.js.map",
+    "static/css/2.e0d768cb.chunk.css": "/static/css/2.e0d768cb.chunk.css",
+    "static/js/2.1825d001.chunk.js": "/static/js/2.1825d001.chunk.js",
+    "static/js/2.1825d001.chunk.js.map": "/static/js/2.1825d001.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.663901ff72093060b5fed60312a17370.js": "/precache-manifest.663901ff72093060b5fed60312a17370.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.e0d768cb.chunk.css.map": "/static/css/2.e0d768cb.chunk.css.map",
+    "static/css/main.c7af6a2a.chunk.css.map": "/static/css/main.c7af6a2a.chunk.css.map",
+    "static/js/2.1825d001.chunk.js.LICENSE.txt": "/static/js/2.1825d001.chunk.js.LICENSE.txt",
+    "static/media/landingPage.css": "/static/media/background.c4388ad7.jpg",
+    "static/media/logo.png": "/static/media/logo.3cb7be30.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.73758338.js",
+    "static/js/runtime-main.84578d5e.js",
     "static/css/2.e0d768cb.chunk.css",
-    "static/js/2.ad137be5.chunk.js",
-    "static/css/main.e508b0ca.chunk.css",
-    "static/js/main.923c6014.chunk.js"
+    "static/js/2.1825d001.chunk.js",
+    "static/css/main.c7af6a2a.chunk.css",
+    "static/js/main.03749532.chunk.js"
   ]
 }

@@ -43,7 +43,7 @@ class Orientation extends React.Component {
     getQuestion() {
         if (this.state.step1)
             return (<h3>Souhaitez-vous vous orienter vers une filière traditionnelle ou vers un parcours particulier ?</h3>);
-        return (<h3>Sélectionnez un test parmi celui du domaine de l'<span style={{color : "#047924"}}>Industrie</span> ou celui de la <span style={{color : "#047924"}}>Pharmacie hôspitalière, biologie médicale et recherche.</span></h3>);
+        return (<h3>Sélectionnez un test parmi celui du domaine de l'<span style={{color : "#047924"}}>Industrie</span> ou celui de la <span style={{color : "#047924"}}>Pharmacie hospitalière, biologie médicale et recherche.</span></h3>);
     }
 
     getButtons() {

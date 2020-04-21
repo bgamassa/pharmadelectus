@@ -138,6 +138,7 @@ class Dashboard extends React.Component {
             this.setState({ alertI: true, loading: false })
         else {
 
+            console.log("coucou")
             var self = this;
             var array = Array(this.state.len).fill(0);
             for (let i = 0; i < this.state.qualities.length; i++) {

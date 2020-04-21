@@ -14,7 +14,7 @@ class LandingPageBar extends React.Component {
             <div style={{ flexGrow: 1 }}>
                 <AppBar position="sticky" style={{ backgroundColor: "#047924" }}>
                     <Toolbar>
-                        <a href="/pharmadelectus-project/#/">
+                        <a href="/pharmadelectus/#/">
                             <LazyLoadImage alt="" src={Logo} height="80" />
                         </a>
                         <div style={{ padding: 10 }} />
@@ -22,7 +22,7 @@ class LandingPageBar extends React.Component {
                             Pharmadelectus
                         </h2>
                         <div style={{ flexGrow: 1 }} />
-                        <Button size="large" style={{ color: "#FFFFFF", borderColor: "#FFFFFF" }} href="/pharmadelectus-project/#/metiers" variant="outlined">Fiches métiers</Button>
+                        <Button size="large" style={{ color: "#FFFFFF", borderColor: "#FFFFFF" }} href="/pharmadelectus/#/metiers" variant="outlined">Fiches métiers</Button>
                     </Toolbar>
                 </AppBar>
             </div >

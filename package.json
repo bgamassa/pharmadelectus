@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://bgamassa.github.io/",
+  "homepage": "https://bgamassa.github.io/pharmadelectus/",
   "dependencies": {
     "@iconify/icons-mdi": "^1.0.92",
     "@iconify/react": "^1.1.3",

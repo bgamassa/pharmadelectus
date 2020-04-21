@@ -52,16 +52,16 @@ class Orientation extends React.Component {
                 <Grid container direction="row" justify="center">
                     <Button size="large" variant="contained" style={{ backgroundColor: "#C7B78F", color: "#FFFFFF" }} onClick={this.selectTrad}>Filières Traditionnelles</Button>
                     <div style={{ padding: 15 }} />
-                    <Button size="large" variant="contained" style={{ backgroundColor: "#C7B78F", color: "#FFFFFF" }} href="/pharmadelectus-project/#/autres">Parcours Particuliers</Button>
+                    <Button size="large" variant="contained" style={{ backgroundColor: "#C7B78F", color: "#FFFFFF" }} href="/pharmadelectus/#/autres">Parcours Particuliers</Button>
                 </Grid>
             );
         }
         return (
             <Grid container direction="column" justify="center">
                 <Grid container direction="row" justify="center">
-                    <Button size="large" variant="contained" style={{ backgroundColor: "#C7B78F", color: "#FFFFFF" }} href="/pharmadelectus-project/#/industrie">Industrie</Button>
+                    <Button size="large" variant="contained" style={{ backgroundColor: "#C7B78F", color: "#FFFFFF" }} href="/pharmadelectus/#/industrie">Industrie</Button>
                     <div style={{ padding: 15 }} />
-                    <Button size="large" variant="contained" style={{ backgroundColor: "#C7B78F", color: "#FFFFFF" }} href="/pharmadelectus-project/#/phbmr">PHBMR</Button>
+                    <Button size="large" variant="contained" style={{ backgroundColor: "#C7B78F", color: "#FFFFFF" }} href="/pharmadelectus/#/phbmr">PHBMR</Button>
                     <div style={{ padding: 15 }} />
                     <Button size="large" variant="contained" style={{ backgroundColor: "#C7B78F", color: "#FFFFFF" }}>Officine</Button>
                 </Grid>
@@ -80,9 +80,9 @@ class Orientation extends React.Component {
     render() {
         return (
             <div>
-                {this.state.industrie ? (<Redirect to="/pharmadelectus-project/#/industrie" />) : (<div></div>)}
-                {this.state.part ? (<Redirect to="/pharmadelectus-project/#/autres" />) : (<div></div>)}
-                {this.state.phbmr ? (<Redirect to="/pharmadelectus-project/#/phbmr" />) : (<div></div>)}
+                {this.state.industrie ? (<Redirect to="/pharmadelectus/#/industrie" />) : (<div></div>)}
+                {this.state.part ? (<Redirect to="/pharmadelectus/#/autres" />) : (<div></div>)}
+                {this.state.phbmr ? (<Redirect to="/pharmadelectus/#/phbmr" />) : (<div></div>)}
                 <LandingPageBar />
                 <section id="banner">
                     <div className="content" justify="center" style={divStyle}>

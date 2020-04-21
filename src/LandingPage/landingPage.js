@@ -20,7 +20,7 @@ class LandingPage extends React.Component {
                         <div style={{ padding: 10 }} />
                         <p style={divStyle}>Pharmadelectus vous propose un test intéractif permettant de découvrir les métiers de la pharmacie <br /> qui conviennent le mieux à vos compétences, qualités et intérêts.</p>
                         <div style={{ padding: 30 }} />
-                        <Button variant="contained" size="large" style={{ backgroundColor: "#12546E", color: "#FFFFFF" }} href="/orientation">Trouver mon orientation</Button>
+                        <Button variant="contained" size="large" style={{ backgroundColor: "#12546E", color: "#FFFFFF" }} href="/#/orientation">Trouver mon orientation</Button>
                     </div>
                     <div style={{ padding: 70 }} />
                 </section>

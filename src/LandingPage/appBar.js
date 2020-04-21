@@ -22,7 +22,7 @@ class LandingPageBar extends React.Component {
                             Pharmadelectus
                         </h2>
                         <div style={{ flexGrow: 1 }} />
-                        <Button size="large" style={{ color: "#FFFFFF", borderColor: "#FFFFFF" }} href="/metiers" variant="outlined">Fiches métiers</Button>
+                        <Button size="large" style={{ color: "#FFFFFF", borderColor: "#FFFFFF" }} href="/#/metiers" variant="outlined">Fiches métiers</Button>
                     </Toolbar>
                 </AppBar>
             </div >

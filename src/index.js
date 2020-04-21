@@ -8,7 +8,7 @@ import Results from './Tests/results';
 import Orientaion from './orientation';
 import Jobs from './jobs';
 import * as serviceWorker from './serviceWorker';
-import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import { Route, HashRouter as Router, Switch } from 'react-router-dom';
 
 const routing = (
   <Router>
